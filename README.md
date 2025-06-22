@@ -73,4 +73,4 @@ st_dataframe_paginator(
 
 ## Screenshot
 
-![sample](./images/sample.gif)
+![sample](sample.gif)
