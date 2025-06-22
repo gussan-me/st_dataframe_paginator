@@ -1,0 +1,126 @@
+/* Container for the entire component */
+.container {
+  font-family: "Inter", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 14px;
+  color: #262730;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  background-color: white;
+}
+
+/* Wrapper to allow horizontal scrolling for wide tables */
+.scroll-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Base table style */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+/* Header cell styles */
+.th {
+  border-bottom: 1.5px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #6b7280;
+  font-size: 13px;
+  text-align: left;
+  position: sticky; /* Keep headers visible when scrolling */
+  top: 0;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Handle for column resizing */
+.resize-handle {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 8px;
+  cursor: col-resize;
+  user-select: none;
+  z-index: 10;
+}
+
+/* Row hover transition effect */
+.tr {
+  transition: background-color 0.2s ease;
+}
+
+/* Table cell styles */
+.td {
+  border-bottom: 1px solid #eee;
+  border-right: 1px solid #ccc;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: #444;
+  font-weight: 400;
+  white-space: nowrap;
+  min-width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* Right-aligned text for numeric data */
+.td-right {
+  text-align: right;
+}
+
+/* Left-aligned text (default for labels, names, etc.) */
+.td-left {
+  text-align: left;
+}
+
+/* Pagination container */
+.pagination {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Pagination button base style */
+.pagination-btn {
+  padding: 6px 14px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  color: #3b82f6;
+  font-weight: 600;
+  user-select: none;
+  transition: background-color 0.15s ease;
+}
+
+/* Style for disabled pagination buttons */
+.pagination-btn.disabled {
+  cursor: default;
+  opacity: 0.5;
+  color: #999;
+  border-color: #ccc;
+}
+
+/* Dropdown to select page size */
+.page-size-select {
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+/* Click effect for pagination button */
+.pagination-btn:active {
+  background-color: #d0d0d0; /* Slight flash when clicked */
+}

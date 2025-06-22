@@ -1,0 +1,1 @@
+recursive-include st_dataframe_paginator/frontend/dist *

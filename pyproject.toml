@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "st_dataframe_paginator"
+version = "0.0.3"
+authors = [
+  { name = "Ayumu Yamaguchi" },
+]
+description = "Dataframe paginator for Streamlit"
+readme = { file = "st_dataframe_paginator/README.md", content-type = "text/markdown" }  # ✅ 修正
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Homepage = "https://github.com/gussan-me/st-dataframe-paginator"
+Issues = "https://github.com/gussan-me/st-dataframe-paginator/issues"
