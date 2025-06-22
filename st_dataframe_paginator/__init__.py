@@ -3,7 +3,7 @@ import streamlit.components.v1 as components
 import pandas as pd
 
 # Determine whether in development or release mode
-_RELEASE = False
+_RELEASE = True
 
 # declare_component: use localhost during development, use "dist" folder in release
 if not _RELEASE:
@@ -25,7 +25,8 @@ def st_dataframe_paginator(
     data: pd.DataFrame,
     page_size: int | None = 10,
     page_size_options: list[int] | None = [10, 25, 50],
-    labels: dict[str, str] | None = None
+    labels: dict[str, str] | None = None,
+    key: str | None = None,
 ):
     """
     A Streamlit component that displays a paginated table from a DataFrame.

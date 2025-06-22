@@ -1,8 +1,8 @@
 import setuptools
 
 setuptools.setup(
-    name="streamlit-custom-component",
-    version="0.0.1",
+    name="st_dataframe_paginator",
+    version="0.0.9",
     author="",
     author_email="",
     description="",

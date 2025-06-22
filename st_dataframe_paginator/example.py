@@ -44,24 +44,7 @@ df = pd.DataFrame({
         "女性", "男性", "男性", "女性", "女性", "男性", "男性", "女性", "女性", "男性",
         "男性", "女性", "男性", "女性", "男性", "女性", "男性", "女性", "男性", "女性"
     ],
-    # 他のカラムも同じように書きます（必要ならお知らせください）
 })
-
-print(df.head())
-# import pandas as pd
-
-# df = pd.DataFrame([
-#     ["A001", "東京", "家電", "テレビ", "Panasonic", "TH-55", 120000, 5, "2024-01-01", "田中", "店頭", "成功", "午前", "現金", "有", "無", "大", "赤", "日本製", "保証有", "レビュー高", "新商品", "在庫有", "配送済", "佐川急便", "5年", "人気", "2024-Q1", "1月", "平日"],
-#     ["A002", "大阪", "食品", "スナック", "Calbee", "ポテチ", 150, 30, "2024-01-03", "佐藤", "オンライン", "成功", "午後", "クレカ", "無", "有", "中", "青", "日本製", "保証無", "レビュー中", "通常品", "在庫少", "配送中", "ヤマト運輸", "なし", "定番", "2024-Q1", "1月", "休日"],
-#     ["A003", "名古屋", "文房具", "ボールペン", "Pilot", "G2", 200, 10, "2024-01-05", "鈴木", "店頭", "失敗", "午前", "現金", "有", "有", "小", "黒", "海外製", "保証無", "レビュー低", "在庫処分", "在庫無", "未配送", "日本郵便", "1年", "不人気", "2024-Q1", "1月", "平日"]
-# ], columns=[
-#     "商品ID", "地域", "カテゴリ", "サブカテゴリ", "メーカー", "モデル", "価格", "数量", "販売日", "販売員",
-#     "販売チャネル", "結果", "時間帯", "支払い方法", "クーポン利用", "返品有無", "サイズ", "色", "製造国",
-#     "保証", "レビュー", "商品種別", "在庫状況", "配送状況", "配送業者", "保証期間", "人気度", "四半期",
-#     "月", "曜日"
-# ])
-
-# print(df)
 
 # Optional: custom labels
 labels = {
@@ -72,33 +55,24 @@ labels = {
     "displayed_record": "Records displayed:",
 }
 
-# Display the component
-# st_dataframe_paginator(
-#     data=df,
-#     page_size=13,
-#     page_size_options=[13, 23, 53],
-#     # labels=labels,  # optional
-# )
-
-import streamlit as st
-# from streamlit_dataframe_paginator import st-dataframe-paginator
-import pandas as pd
-
-# Example DataFrame
-df = pd.DataFrame({
-"Name": ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Hank"],
-"Score": [85, 92, 88, 70, 95, 60, 75, 90]
-})
-
 # Use the paginator
 st_dataframe_paginator(
-df,
-page_size=3,
-page_size_options=[3, 5, 10],
-labels={
-    "first": "⏮️ First",
-    "prev": "◀️ Previous",
-    "next": "Next ▶️",
-    "last": "Last ⏭️",
-}
+    df,
+    page_size=3,
+    page_size_options=[3, 5, 10],
+    labels={
+        "first": "⏮️ First",
+        "prev": "◀️ Previous",
+        "next": "Next ▶️",
+        "last": "Last ⏭️",
+    },
+    key="example_paginator"
+)
+
+st_dataframe_paginator(
+    df,
+    page_size=5,
+    page_size_options=[5, 10, 20],
+    labels=labels,
+    key="example_paginator_2"
 )

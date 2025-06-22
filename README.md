@@ -58,7 +58,8 @@ st_dataframe_paginator(
         "prev": "◀️ Previous",
         "next": "Next ▶️",
         "last": "Last ⏭️",
-    }
+    },
+    key="st_paginator_1"
 )
 ```
 
@@ -69,6 +70,7 @@ st_dataframe_paginator(
 | `page_size`         | int         | `10`           | Number of rows per page                     |
 | `page_size_options` | list[int]   | `[10, 20, 50]` | Dropdown options for page size              |
 | `labels`            | dict        | Optional       | Custom labels for navigation buttons        |
+| `key`               | str or int | Optional | a unique identifier used to distinguish widgets and avoid conflicts when multiple elements of the same type are present|
 
 
 ## Screenshot
